@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
-public class main : MonoBehaviour
+[InitializeOnLoad]
+public class Main
 {
-    // Start is called before the first frame update
-    void Start()
+
+    // static LightManager lightManager;
+    static GameObject gameObject;
+
+    static Main()
     {
-        
+        Debug.Log("Up and running");
+        gameObject = new GameObject("lights");
+        gameObject.AddComponent<LightManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }
